@@ -36,7 +36,7 @@ export const PiggySlideTrack = () => {
     if (piggyPosition) {
       setCoinEnterPosition(piggyPosition.top - piggyPosition.height / 2 + 20)
     }
-  });
+  }, [piggyPosition]);
 
   const handleDrag = (e: any, ui: { deltaX: number; deltaY: number; }) => {
     const { x, y } = coinPosition;
@@ -72,11 +72,11 @@ export const PiggySlideTrack = () => {
       </div>
       <div className={gradientBoxStyle(coinPosition.y, didCoinEnter)} />
       <div className={qrCodeContainerStyle(didCoinEnter)} onClick={onQrClick}>
-        <img src={QrCode} className={qrCodeStyle} />
+        <img src={QrCode} className={qrCodeStyle} alt="qrcode" />
         <div className={messageStyle}>Scan or click me</div>
       </div>
       <div className={piggyContainerStyle}>
-        <img id="piggy" src={Piggy} className={piggyStyle(isDragging)} draggable="false" onClick={onPiggyClick} />
+        <img id="piggy" src={Piggy} className={piggyStyle(isDragging)} draggable="false" onClick={onPiggyClick} alt="piggy" />
       </div>
       <Draggable 
         axis="y" 
@@ -89,6 +89,7 @@ export const PiggySlideTrack = () => {
           draggable="false" 
           className={cx(dubCoinStyle(didCoinEnter), 'handle')} 
           src={DubCoin} 
+          alt="coin" 
         />
       </Draggable>
       
