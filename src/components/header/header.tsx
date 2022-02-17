@@ -7,9 +7,27 @@ export const Header = () => {
     <div className={headerContainerStyle}>
       <img src={logo} width={80} />
       <div className={headerLinkContainerStyle}>
-        <Link to="/about" className={headerLinkStyle}>About</Link>
-        <Link to="/community" className={headerLinkStyle}>Community</Link>
-        <Link to="/careers" className={headerLinkStyle}>Careers</Link>
+        <a 
+          href="https://echofi.notion.site/dub-Company-Overview-f00ee0b8728f4e8f828dfafa303c319d"
+          target="_blank"  
+          className={headerLinkStyle}
+        >
+          About
+        </a>
+        <a 
+          href="https://discord.gg/psQwyWEj"
+          target="_blank" 
+          className={headerLinkStyle}
+        >
+          Community
+        </a>
+        <a 
+          href="https://www.notion.so/echofi/dub-Careers-1f9675d6ef1c474fa12efe1a0ac5c4de"
+          target="_blank" 
+          className={headerLinkStyle}
+        >
+          Careers
+        </a>
       </div>
     </div>
   )
