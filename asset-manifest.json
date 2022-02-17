@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/dub-website/static/css/main.9b0a5110.css",
+    "main.js": "/dub-website/static/js/main.099f3baa.js",
+    "static/js/787.e20eebfe.chunk.js": "/dub-website/static/js/787.e20eebfe.chunk.js",
+    "static/media/piggy.png": "/dub-website/static/media/piggy.de4da9e373a61f902024.png",
+    "static/media/dub_coin.png": "/dub-website/static/media/dub_coin.86df2d4f08f3eb941526.png",
+    "index.html": "/dub-website/index.html",
+    "static/media/chevron.svg": "/dub-website/static/media/chevron.5b29ab882e25fe42ca692f46e30b058c.svg",
+    "main.9b0a5110.css.map": "/dub-website/static/css/main.9b0a5110.css.map",
+    "main.099f3baa.js.map": "/dub-website/static/js/main.099f3baa.js.map",
+    "787.e20eebfe.chunk.js.map": "/dub-website/static/js/787.e20eebfe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b0a5110.css",
+    "static/js/main.099f3baa.js"
+  ]
+}
