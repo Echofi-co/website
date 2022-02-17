@@ -1,5 +1,5 @@
 {
-  "homepage": "http://engineerliz.github.io/dub-website",
+  "homepage": ".",
   "name": "dub_website",
   "version": "0.1.0",
   "private": true,
