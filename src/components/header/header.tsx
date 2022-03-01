@@ -6,7 +6,7 @@ export const Header = () => {
     <div className={headerContainerStyle}>
       <img src={logo} width={80} alt="logo" />
       <div className={headerLinkContainerStyle}>
-        <a 
+        {/* <a 
           href="https://echofi.notion.site/dub-Company-Overview-f00ee0b8728f4e8f828dfafa303c319d"
           target="_blank"  
           className={headerLinkStyle}
@@ -29,7 +29,7 @@ export const Header = () => {
           rel="noreferrer"
         >
           Careers
-        </a>
+        </a> */}
       </div>
     </div>
   )

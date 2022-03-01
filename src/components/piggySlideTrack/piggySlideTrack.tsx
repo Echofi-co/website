@@ -67,7 +67,7 @@ export const PiggySlideTrack = () => {
     <div>
       
       <div className={messageContainerStyle}>
-        <div className={messageStyle}>Slide down for a dub</div>
+        <div className={messageStyle}>Slide the coin down for a dub</div>
         <Chevron />
       </div>
       <div className={gradientBoxStyle(coinPosition.y, didCoinEnter)} />

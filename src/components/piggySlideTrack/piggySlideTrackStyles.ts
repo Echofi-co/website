@@ -9,7 +9,8 @@ export const piggyContainerStyle = css({
 });
 
 export const piggyStyle = (isActive?: boolean) => css({
-  width: 500,
+  maxWidth: 500,
+  width: '50%',
   position: 'fixed',
   bottom: 0,
   left: '50%',
@@ -60,7 +61,7 @@ export const messageContainerStyle = css({
 
 export const messageStyle = css({
   ...Fonts.SubHeading.SH6,
-  color: Colors.White,
+  color: Colors.Gray.Gray2,
   marginBottom: 12,
 });
 
