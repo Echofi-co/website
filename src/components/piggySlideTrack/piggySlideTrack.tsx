@@ -1,7 +1,7 @@
 import Draggable from 'react-draggable';
 import Piggy from '../../assets/piggy.png';
 import DubCoin from '../../assets/dub_coin.png';
-import QrCode from '../../assets/qrcode.png';
+import QrCode from '../../assets/dub_download_qr.png';
 import { 
   coinContainerStyle,
   dubCoinStyle, 
@@ -60,7 +60,7 @@ export const PiggySlideTrack = () => {
   };
 
   const onQrClick = () => {
-    window.open('https://urlgeni.us/applemusic/dubapp', '_blank');
+    window.open('https://qrcodes.pro/jHtqzf', '_blank');
   };
 
   return (
