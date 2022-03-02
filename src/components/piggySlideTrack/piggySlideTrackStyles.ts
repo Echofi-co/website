@@ -35,7 +35,7 @@ export const dubCoinStyle = (isSuccess?: boolean) => css({
   opacity: isSuccess ? 0 : 1,
   zIndex: isSuccess ? -1 : 'auto',
   transform: 'none',
-  width: 120,
+  width: 100,
   ':hover': {
     cursor: 'pointer',
   }

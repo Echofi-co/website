@@ -34,7 +34,7 @@ export const PiggySlideTrack = () => {
 
   useEffect(() => {
     if (piggyPosition) {
-      setCoinEnterPosition(piggyPosition.top - piggyPosition.height / 2 + 20)
+      setCoinEnterPosition(piggyPosition.top - piggyPosition.height / 2 - 100)
     }
   }, [piggyPosition]);
 
