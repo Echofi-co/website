@@ -9,7 +9,7 @@ export const piggyContainerStyle = css({
 });
 
 export const piggyStyle = (isActive?: boolean) => css({
-  maxWidth: 500,
+  maxWidth: 420,
   width: '50%',
   position: 'fixed',
   bottom: 0,
