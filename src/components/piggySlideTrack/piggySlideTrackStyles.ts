@@ -61,7 +61,7 @@ export const messageContainerStyle = css({
 
 export const messageStyle = css({
   ...Fonts.SubHeading.SH6,
-  color: Colors.Gray.Gray2,
+  color: Colors.Gray.Gray4,
   marginBottom: 12,
 });
 

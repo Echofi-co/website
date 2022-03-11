@@ -1,7 +1,7 @@
 import Draggable from 'react-draggable';
 import Piggy from '../../assets/piggy.png';
 import DubCoin from '../../assets/dub_coin.png';
-import QrCode from '../../assets/dub_download_qr.png';
+import GiftBox from '../../assets/gift_box.png';
 import { 
   coinContainerStyle,
   dubCoinStyle, 
@@ -72,8 +72,8 @@ export const PiggySlideTrack = () => {
       </div>
       <div className={gradientBoxStyle(coinPosition.y, didCoinEnter)} />
       <div className={qrCodeContainerStyle(didCoinEnter)} onClick={onQrClick}>
-        <img src={QrCode} className={qrCodeStyle} alt="qrcode" />
-        <div className={messageStyle}>Scan or click me</div>
+        <img src={GiftBox} className={qrCodeStyle} alt="qrcode" />
+        <div className={messageStyle}>Click me</div>
       </div>
       <div className={piggyContainerStyle}>
         <img id="piggy" src={Piggy} className={piggyStyle(isDragging)} draggable="false" onClick={onPiggyClick} alt="piggy" />
