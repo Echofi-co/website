@@ -2,6 +2,7 @@ import Draggable from 'react-draggable';
 import Piggy from '../../assets/piggy.png';
 import DubCoin from '../../assets/dub_coin.png';
 import GiftBox from '../../assets/gift_box.png';
+import QrCode from '../../assets/qr_code.png';
 import { 
   coinContainerStyle,
   dubCoinStyle, 
@@ -16,6 +17,7 @@ import {
 import { useEffect, useState } from 'react';
 import { cx } from '@emotion/css';
 import { ReactComponent as Chevron } from '../../assets/chevron.svg';
+import { useWindowSize } from '@react-hook/window-size';
 
 export interface Position {
   x: number;
@@ -23,20 +25,29 @@ export interface Position {
 }
 
 export const PiggySlideTrack = () => {
-  const { innerHeight: height } = window;
+  const [width, height] = useWindowSize();
 
   const [coinPosition, setCoinPosition] = useState<Position>({ x: 0, y: 0 });
   const [didCoinEnter, setDidCointEnter] = useState<boolean>(false);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [coinEnterPosition, setCoinEnterPosition] = useState<number>(height - 100);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const piggyPosition = document.getElementById('piggy')?.getBoundingClientRect();
-
+  
   useEffect(() => {
     if (piggyPosition) {
       setCoinEnterPosition(piggyPosition.top - piggyPosition.height / 2 - 100)
     }
   }, [piggyPosition]);
+
+  useEffect(() => {
+    if (height < 800 && width < 500) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [height, width])
 
   const handleDrag = (e: any, ui: { deltaX: number; deltaY: number; }) => {
     const { x, y } = coinPosition;
@@ -72,8 +83,8 @@ export const PiggySlideTrack = () => {
       </div>
       <div className={gradientBoxStyle(coinPosition.y, didCoinEnter)} />
       <div className={qrCodeContainerStyle(didCoinEnter)} onClick={onQrClick}>
-        <img src={GiftBox} className={qrCodeStyle} alt="qrcode" />
-        <div className={messageStyle}>Click me</div>
+        {isMobile ? <img src={GiftBox} className={qrCodeStyle} alt="qrcode" /> : <img src={QrCode} className={qrCodeStyle} alt="qrcode" />}
+        <div className={messageStyle}>{isMobile ? 'Click me' : 'Click or scan me'}</div>
       </div>
       <div className={piggyContainerStyle}>
         <img id="piggy" src={Piggy} className={piggyStyle(isDragging)} draggable="false" onClick={onPiggyClick} alt="piggy" />
